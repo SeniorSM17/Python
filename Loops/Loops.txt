@@ -1,0 +1,211 @@
+18 Accept 10 numbers from the user and display their average. 
+# In[130]:
+
+
+list_number=list(map(int,input().split()))
+print("Average of enterted number is : ", sum(list_number)/10)
+
+
+# In[131]:
+
+
+print("Please Enter 10 number")
+list_num =[]
+sums=0
+for i in range(10):
+    sums+= int(input())
+print("Average of enterted number is : ", sums/10)
+    
+
+
+# ## Exeercise -> Loop
+Write a program to display sum of odd numbers and even numbers that fall between 12 and 37(including both numbers) 
+# In[54]:
+
+
+sums=0
+sums1=0
+for i in range(12,38):
+    if i%2!=0:
+        sums+=i
+    else:
+        sums1+=i
+print(sums,sums1)
+
+Write a program to display all the numbers which are divisible by 11 but not by 2 between 100 and 500. 
+# In[134]:
+
+
+for i in range(100,500):
+    if i %11==0 and i%2!=0:
+        print(i,end=",")
+
+Write a program to print numbers from 1 to 20 except multiple of 2 & 3 
+# In[136]:
+
+
+for i in range(1,21):
+    if i%2==0 or i%3==0:
+        pass
+    else:
+        print(i,end=",")
+
+Write a program that keep on accepting number from the user until user enters Zero. Display the sum and average of all the numbers. 
+# In[137]:
+
+
+num=1
+i=-1
+s=0
+while(num!=0):
+    num=int(input("Enter any number"))
+    s=s+num
+    i=i+1
+print("Average",s/i)
+
+Write a program to accept decimal number and display its binary number. 
+# In[16]:
+
+
+number=int(input("Enter the decimal number"))
+binary_number=0
+while number >0:
+    binary_number = binary_number * 10 +number%2
+    number=number//2
+print(binary_number)
+
+Convert the following loop into for loop : 
+
+x = 4 
+
+while(x<=8): 
+
+    print(x*10) 
+
+    x+=2 
+# In[20]:
+
+
+for i in range(4,9,2):
+    print(i*10)
+
+What is nested loop? 
+
+A nested loop is a loop within a loop, an inner loop within the body of an outer one.
+Write a program to convert temperature in Fahrenheit to Celsius. 
+# In[24]:
+
+
+temperature=float(input("Enter the temperature in Fahrenheit"))
+print("The temperature in degree Celsisus is ", round((temperature -32)*(5/9),2))
+
+
+# In[26]:
+
+
+nterms = int(input("How many terms? "))
+n1, n2 = 0, 1
+count = 0
+if nterms <= 0:
+    print("Please enter a positive integer")
+elif nterms == 1:
+    print("Fibonacci sequence upto",nterms,":")
+    print(n1)
+else:
+    print("Fibonacci sequence:")
+    while count < nterms:
+        print(n1)
+        nth = n1 + n2
+        n1 = n2
+        n2 = nth
+        count += 1
+
+Write a Python program which iterates the integers from 1 to 50. For multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz". 
+# In[28]:
+
+
+for i in range(0,51):
+    if i % 3==0 and i %5==0 :
+        print("FizzBuzz", end = " ,")
+    elif i%3==0:
+        print("Fizz",end=" ,")
+    elif  i%5==0:
+        print("Buzz",end=" ,")
+    else:
+        print(i,end=" ,")
+
+Write a Python program that prints all the numbers from 0 to 6 except 3 and 6. 
+
+Note : Use 'continue' statement. 
+
+Expected Output : 0 1 2 4 5 
+# In[30]:
+
+
+for i in range(0,7):
+    if i == 3 or i == 6:
+        continue
+    else:
+        print(i,end=", ")
+
+
+# # Exercise -> Team 
+Write a program to get all vowels from given string
+# In[32]:
+
+
+str1=input("Enter a string")
+vowels=["a","e","i","o","u"]
+for i in str1.lower():
+    if i in vowels:
+        print(i,end=", ")
+
+Write a program to calculate the simple interest
+# In[33]:
+
+
+principle = float(input("Enter the Princliple amount"))
+rate=float(input("Enter the rate of simple intrest"))
+time=int(input("Enter the period \nNote enter period in integer format only"))
+print("The intrest is ",(principle*rate*time)/100)
+
+Python Program to Find Sum of Series 1 + 1/2 + 1/3 + 1/4 + ……. + 1/N
+# In[34]:
+
+
+n=int(input("Enter the number of terms: "))
+sum1=0
+for i in range(1,n+1):
+    sum1=sum1+(1/i)
+print("The sum of series is",round(sum1,2))
+
+Python Program to Find the Sum of the Series 1/1!+1/2!+1/3!+…1/N!
+# In[35]:
+
+
+def sumOfSeries(num): 
+    res = 0
+    fact = 1
+       
+    for i in range(1, num+1): 
+        fact *= i 
+        res = res + (i/ fact) 
+           
+    return res 
+       
+n=int(input("Enter the number of terms: "))
+ 
+print("Sum: ", sumOfSeries(n)) 
+
+Python Program to Replace All Occurrences of ‘a’ with $ in a String
+# In[38]:
+
+
+str1= input("Enter the string")
+str2=""
+for i in str1.lower():
+    if i =='a':
+        str2+='$'
+    else:
+        str2+=i
+print(str2)
