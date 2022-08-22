@@ -1,0 +1,22 @@
+1.
+Calculate income tax for the given income by adhering to the below rules
+Taxable Income    Rate (in %)
+First $10,000    0
+Next $10,000    10
+The remaining    20
+Expected Output:
+
+For example, suppose the taxable income is 45000 the income tax payable is
+
+10000*0% + 10000*10%  + 25000*20% = $6000.
+
+2.Count the length of list with out using any inbuilt function.
+
+3.Write a Python program to create a histogram from a given list of integers.
+
+4. Take input from user and if input is string print String
+if input is integer/float print integer
+if input is mix of string and integer print Error
+HINT Can be done using ASCII code
+
+5.Python program to check if a string is palindrome or not
